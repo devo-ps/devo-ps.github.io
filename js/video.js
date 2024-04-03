@@ -2,13 +2,7 @@ $(function() {
   // Replace youtube links with an embed
   var width  = 640;
   var height = 480;
-  var embed = '<object width="'+ width +'" height="'+ height +'">'+
-            '  <param name="movie" value="http://www.youtube.com/v/[vid]&amp;hl=en&amp;fs=1"></param>'+
-            '  <param name="allowFullScreen" value="true"></param>'+
-            '  <param name="allowscriptaccess" value="always"></param>'+
-            '  <param name="wmode" value="transparent"></param>'+
-            '  <embed src="http://www.youtube.com/v/[vid]&amp;hl=en&amp;fs=1" type="application/x-shockwave-flash" wmode="transparent" allowscriptaccess="always" allowfullscreen="true" width="'+ width +'" '+'height="'+ height +'"></embed>'+
-            '</object>';
+  var embed = '<iframe width="'+ width +'" height="'+ height +'" src="https://www.youtube.com/embed/RIsiAluCxU4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
 
   $('.blog a[href*="youtube.com/watch"]').each(function() {
       var that = $(this);
